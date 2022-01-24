@@ -13,131 +13,162 @@ function RegisterForm() {
   const [country, setCountry] = useState("");
   const [homePhone, setHomePhone] = useState("");
   const [mobilePhone, setMobilePhone] = useState("");
+
+  const handleSubmit = (e) => {
+    const newAccount = {
+      userName: userName,
+      email: email,
+      password: password,
+      firstName: firstName,
+      lastName: lastName,
+      address: address,
+      city: city,
+      country: country,
+      homePhone: homePhone,
+      mobilePhone: mobilePhone,
+    };
+    console.log(newAccount);
+  };
+
   return (
     <div className="form-container">
       <div className="container">
         <div className="row">
           <div className="col"></div>
-          <div className="col-7">
-            <div class="form-floating">
+          <div className="col-9">
+            <div className="form-floating">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="floatingInputGrid"
                 placeholder="Username"
-                value=""
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
               />
-              <label for="floatingInputGrid">Username</label>
+              <label htmlFor="floatingInputGrid">Username</label>
             </div>
-            <div class="form-floating">
+            <div className="form-floating">
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 id="floatingInputGrid"
                 placeholder="Enter Email"
-                value=""
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <label for="floatingInputGrid">Email</label>
+              <label htmlFor="floatingInputGrid">Email</label>
             </div>
-            <div class="form-floating">
+            <div className="form-floating">
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 id="floatingInputGrid"
                 placeholder="Create Password"
-                value=""
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <label for="floatingInputGrid">Password</label>
+              <label htmlFor="floatingInputGrid">Password</label>
             </div>
             <div className="container">
               <div className="row">
                 <div className="col">
-                  <div class="form-floating">
+                  <div className="form-floating">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="floatingInputGrid"
                       placeholder="Enter Firstname"
-                      value=""
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                     />
-                    <label for="floatingInputGrid">First Name</label>
+                    <label htmlFor="floatingInputGrid">First Name</label>
                   </div>
                 </div>
                 <div className="col">
-                  <div class="form-floating">
+                  <div className="form-floating">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="floatingInputGrid"
                       placeholder="Enter Lastname"
-                      value=""
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                     />
-                    <label for="floatingInputGrid">Last Name</label>
+                    <label htmlFor="floatingInputGrid">Last Name</label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="form-floating">
+            <div className="form-floating">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="floatingInputGrid"
                 placeholder="Enter Address"
-                value=""
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
               />
-              <label for="floatingInputGrid">Address</label>
+              <label htmlFor="floatingInputGrid">Address</label>
             </div>
             <div className="container">
               <div className="row">
                 <div className="col">
-                  <div class="form-floating">
+                  <div className="form-floating">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="floatingInputGrid"
                       placeholder="Enter City"
-                      value=""
+                      value={city}
+                      onChange={(e) => setCity(e.target.value)}
                     />
-                    <label for="floatingInputGrid">City</label>
+                    <label htmlFor="floatingInputGrid">City</label>
                   </div>
                 </div>
                 <div className="col">
-                  <div class="form-floating">
+                  <div className="form-floating">
                     <select
-                      class="form-select"
+                      className="form-select"
                       id="floatingSelectGrid"
                       aria-label="Floating label select example"
+                      onChange={(e) => setCountry(e.target.value)}
+                      value={country}
                     >
-                      <option selected></option>
-                      <option value="1">United States</option>
-                      <option value="2">Canada</option>
-                      <option value="3">Mexico</option>
+                      <option defaultValue={""}></option>
+                      <option value="Unitied States">United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Mexico">Mexico</option>
                     </select>
-                    <label for="floatingSelectGrid">Select Your Country</label>
+                    <label htmlFor="floatingSelectGrid">
+                      Select Your Country
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="form-floating">
+            <div className="form-floating">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="floatingInputGrid"
                 placeholder="Enter Home phone number"
-                value=""
+                value={homePhone}
+                onChange={(e) => setHomePhone(e.target.value)}
               />
-              <label for="floatingInputGrid">Home Phone</label>
+              <label htmlFor="floatingInputGrid">Home Phone</label>
             </div>
-            <div class="form-floating">
+            <div className="form-floating">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="floatingInputGrid"
                 placeholder="Enter Mobile phone number"
-                value=""
+                value={mobilePhone}
+                onChange={(e) => setMobilePhone(e.target.value)}
               />
-              <label for="floatingInputGrid">Mobile Phone</label>
+              <label htmlFor="floatingInputGrid">Mobile Phone</label>
             </div>
+            <button onClick={handleSubmit}>Create Account</button>
           </div>
           <div className="col"></div>
         </div>
