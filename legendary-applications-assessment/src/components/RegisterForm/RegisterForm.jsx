@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./registerForm.css";
 
 function RegisterForm() {
   const [userName, setUserName] = useState("");
@@ -13,11 +14,11 @@ function RegisterForm() {
   const [homePhone, setHomePhone] = useState("");
   const [mobilePhone, setMobilePhone] = useState("");
   return (
-    <div>
+    <div className="form-container">
       <div className="container">
         <div className="row">
           <div className="col"></div>
-          <div className="col-6">
+          <div className="col-7">
             <div class="form-floating">
               <input
                 type="text"

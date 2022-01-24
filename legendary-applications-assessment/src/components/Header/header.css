@@ -1,0 +1,10 @@
+.header-container {
+  background-color: rgb(37, 36, 36);
+  height: 12vh;
+  margin-bottom: 35px;
+}
+
+.company-logo {
+  margin-top: 10px;
+  color: whitesmoke;
+}

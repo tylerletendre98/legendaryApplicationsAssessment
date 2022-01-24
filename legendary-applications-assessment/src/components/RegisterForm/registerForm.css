@@ -1,0 +1,13 @@
+.form-container {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+  box-shadow: 5px 10px 7px 3px rgba(0, 0, 0, 0.27);
+}
+
+.form-floating {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
