@@ -1,6 +1,17 @@
 import React from "react";
+import { useState } from "react";
 
 function RegisterForm() {
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [country, setCountry] = useState("");
+  const [homePhone, setHomePhone] = useState("");
+  const [mobilePhone, setMobilePhone] = useState("");
   return (
     <div>
       <div className="container">
