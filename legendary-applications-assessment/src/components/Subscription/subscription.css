@@ -1,0 +1,66 @@
+.map-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-container {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: 5px 10px 7px 3px rgba(0, 0, 0, 0.27);
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.subscription-button button {
+  background-color: rgb(42, 42, 185);
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  width: 50%;
+}
+
+.product-name {
+  margin-bottom: 10px;
+}
+
+.discount-box {
+  background-color: white;
+  box-shadow: 5px 10px 7px 3px rgba(0, 0, 0, 0.27);
+  border-radius: 15px;
+  width: 30vw;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5%;
+  position: absolute;
+  left: 35%;
+}
+
+.discount-box-title {
+  margin-bottom: 10px;
+}
+
+.discount-button {
+  margin-top: 15px;
+  color: rgb(42, 42, 185);
+}
+
+.discount-button button {
+  background-color: rgb(42, 42, 185);
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

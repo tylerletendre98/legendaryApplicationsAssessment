@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./registerForm.css";
+import { Link } from "react-router-dom";
 
 function RegisterForm() {
   const [userName, setUserName] = useState("");
@@ -168,7 +169,11 @@ function RegisterForm() {
               />
               <label htmlFor="floatingInputGrid">Mobile Phone</label>
             </div>
-            <button onClick={handleSubmit}>Create Account</button>
+            <div>
+              <Link to="/subscriptionPage">
+                <button onClick={() => handleSubmit()}>Create Account</button>
+              </Link>
+            </div>
           </div>
           <div className="col"></div>
         </div>

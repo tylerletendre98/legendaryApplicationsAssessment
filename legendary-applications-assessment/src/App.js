@@ -8,22 +8,22 @@ function App() {
 
   const productList = [
     {
-      name:'basic',
-      description:'this is a basic membership',
+      name:'Basic',
+      description:'This is a basic membership',
       price: 15,
       subscriptionLength:'6 months'
     },
     {
-      name:'gold',
-      description:'this is a gold membership',
-      price: 35,
+      name:'Gold',
+      description:'This is a gold membership',
+      price: 40,
       subscriptionLength:'1 year'
     },
     {
-      name:'premium',
-      description:'this is a premium membership',
-      price: 100,
-      subscriptionLength:''
+      name:'Premium',
+      description:'This is a premium membership',
+      price: 200,
+      subscriptionLength:'Life'
     }
   ]
 
