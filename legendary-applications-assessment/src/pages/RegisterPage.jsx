@@ -22,6 +22,7 @@ function RegisterPage(props) {
         subscriptionLevel: subscriptionLevel
       }
     props.setUser(user)
+    alert('Thankyou for creating a account!')
     console.log(user)
   }
 
@@ -42,7 +43,8 @@ function RegisterPage(props) {
         </div>
       </div>
     )
-  }else{
+  }
+  else{
       return (
         <div>
           <div>

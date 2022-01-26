@@ -1,6 +1,6 @@
 .App {
-  height: 250vh;
+  height: 150vh;
   text-align: center;
-  background-color: lightgray;
+  background-color: rgb(240, 232, 232);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
