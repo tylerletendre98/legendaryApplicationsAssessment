@@ -5,6 +5,7 @@ function Subscription(props) {
   const [discounted, setDiscounted] = useState(false);
   const [discountCode, setDiscountCode] = useState("");
 
+  //this lets the user get a discount if they enter the code of 12345
   const handleSubmit = () => {
     if (discountCode === "12345") {
       setDiscounted(!discounted);
@@ -13,13 +14,28 @@ function Subscription(props) {
     }
   };
 
+  //this sets the subscription level of the user as well as sets the user object
+  const handleChoice = (userChoice)=>{
+    switch (userChoice) {
+      case 0:
+        props.createUserObject(props.productList[userChoice]);
+        break;
+      case 1:
+        props.createUserObject(props.productList[userChoice]);
+      break;
+      case 2:
+        props.createUserObject(props.productList[userChoice]);
+      break;
+    }
+  }
+
   if (discounted === false) {
     return (
       <div>
         <div className="map-container">
           {props.productList.map((product) => {
             return (
-              <div className="product-container">
+              <div className="product-container" key={product.id}>
                 <div>
                   <div className="product-name">
                     <h3>{product.name}</h3>
@@ -35,7 +51,7 @@ function Subscription(props) {
                   </div>
                 </div>
                 <div className="subscription-button">
-                  <button>Subscribe</button>
+                  <button onClick={()=>handleChoice(product.id)}>Subscribe</button>
                 </div>
               </div>
             );
@@ -69,7 +85,7 @@ function Subscription(props) {
       <div className="map-container">
         {props.productList.map((product) => {
           return (
-            <div className="product-container">
+            <div className="product-container" key={product.id}>
               <div>
                 <div className="product-name">
                   <h3>{product.name}</h3>

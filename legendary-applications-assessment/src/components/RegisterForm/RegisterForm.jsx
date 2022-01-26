@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import "./registerForm.css";
-import { Link } from "react-router-dom";
 import FormHeader from "../FormHeader/FormHeader";
 
 function RegisterForm(props) {
@@ -16,6 +15,8 @@ function RegisterForm(props) {
   const [homePhone, setHomePhone] = useState("");
   const [mobilePhone, setMobilePhone] = useState("");
 
+
+  //this takes in all infomation from the inputs and creates the userInfo object and sets that in the registerpage file
   const handleSubmit = (e) => {
     if (
       userName.length > 0 &&
@@ -41,8 +42,7 @@ function RegisterForm(props) {
         homePhone: homePhone,
         mobilePhone: mobilePhone,
       };
-      props.setUser(newAccount);
-      alert("Account creation successful!");
+      props.setUserInfo(newAccount);
     } else {
       alert("Infomation missing!");
     }
@@ -182,7 +182,7 @@ function RegisterForm(props) {
         <label htmlFor="floatingInputGrid">Mobile Phone</label>
       </div>
       <div className="register-button">
-        <button onClick={() => handleSubmit()}>Create Account</button>
+        <button onClick={() => handleSubmit()}>Next Step</button>
       </div>
     </div>
   );
