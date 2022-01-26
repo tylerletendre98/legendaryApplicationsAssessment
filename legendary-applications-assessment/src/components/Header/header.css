@@ -1,10 +1,30 @@
 .header-container {
   background-color: rgb(37, 36, 36);
-  height: 11vh;
+  height: 15vh;
   margin-bottom: 35px;
 }
 
 .company-logo {
-  margin-top: 11%;
-  color: whitesmoke;
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  color: lightgray;
+}
+
+.header-buttons {
+  width: 7.5vw;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+
+.header-buttons button {
+  border-style: solid 2px;
+  border-color: lightgray;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: rgb(37, 36, 36);
+  color: lightgray;
+  padding: 5px, 10px;
 }

@@ -15,14 +15,12 @@
 }
 
 .subscription-button button {
-  background-color: rgb(42, 42, 185);
-  border-style: none;
-  border-radius: 5px;
-  color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  border-radius: 15px;
+  border-color: rgb(98, 98, 255);
+  border-width: 5px;
+  border-style: solid;
+  color: rgb(98, 98, 255);
+  padding: 2px, 5px;
   margin-top: 15px;
   width: 50%;
 }
@@ -55,12 +53,10 @@
 }
 
 .discount-button button {
-  background-color: rgb(42, 42, 185);
-  color: white;
-  border-style: none;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  border-radius: 15px;
+  border-color: rgb(98, 98, 255);
+  border-width: 5px;
+  border-style: solid;
+  color: rgb(98, 98, 255);
+  padding: 2px, 5px;
 }
