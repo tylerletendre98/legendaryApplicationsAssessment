@@ -34,11 +34,35 @@ function App() {
     }
   ]
 
+  const discountedProductList = [
+    {
+      id:0,
+      name:'Basic',
+      description:'This is a basic membership',
+      price: 15*.95,
+      subscriptionLength:'6 months'
+    },
+    {
+      id:1,
+      name:'Gold',
+      description:'This is a gold membership',
+      price: 40*.95,
+      subscriptionLength:'1 year'
+    },
+    {
+      id:2,
+      name:'Premium',
+      description:'This is a premium membership',
+      price: 200*.95,
+      subscriptionLength:'Life'
+    }
+  ]
+
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<RegisterPage productList={productList} setUser={setUser}/>} />
+        <Route path="/" element={<RegisterPage productList={productList} setUser={setUser} discountedProductList={discountedProductList}/>} />
       </Routes>
     </div>
   );

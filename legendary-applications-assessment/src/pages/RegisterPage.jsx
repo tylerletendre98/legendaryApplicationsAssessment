@@ -48,7 +48,7 @@ function RegisterPage(props) {
       return (
         <div>
           <div>
-            <Subscription productList={props.productList} createUserObject={createUserObject}/>
+            <Subscription productList={props.productList} createUserObject={createUserObject} discountedProductList = {props.discountedProductList}/>
           </div>
         </div>
       );

@@ -18,13 +18,25 @@ function Subscription(props) {
   const handleChoice = (userChoice)=>{
     switch (userChoice) {
       case 0:
-        props.createUserObject(props.productList[userChoice]);
+        if(discounted === false){
+          props.createUserObject(props.productList[userChoice]);
+        }else{
+          props.createUserObject(props.discountedProductList[userChoice])
+        }
         break;
       case 1:
-        props.createUserObject(props.productList[userChoice]);
+        if(discounted === false){
+          props.createUserObject(props.productList[userChoice]);
+        }else{
+          props.createUserObject(props.discountedProductList[userChoice])
+        }
       break;
       case 2:
-        props.createUserObject(props.productList[userChoice]);
+        if(discounted === false){
+          props.createUserObject(props.productList[userChoice]);
+        }else{
+          props.createUserObject(props.discountedProductList[userChoice])
+        }
       break;
     }
   }
@@ -32,6 +44,9 @@ function Subscription(props) {
   if (discounted === false) {
     return (
       <div>
+        <div className="product-header">
+          <h2>Please select a Subscription Level</h2>
+        </div>
         <div className="map-container">
           {props.productList.map((product) => {
             return (
@@ -83,7 +98,7 @@ function Subscription(props) {
   } else {
     return (
       <div className="map-container">
-        {props.productList.map((product) => {
+        {props.discountedProductList.map((product) => {
           return (
             <div className="product-container" key={product.id}>
               <div>
@@ -97,11 +112,11 @@ function Subscription(props) {
                   <p>Duration: {product.subscriptionLength}</p>
                 </div>
                 <div className="product-price">
-                  <h4>${product.price * 0.95}</h4>
+                  <h4>${product.price}</h4>
                 </div>
               </div>
               <div className="subscription-button">
-                <button>Subscribe</button>
+                <button onClick={()=>handleChoice(product.id)}>Subscribe</button>
               </div>
             </div>
           );
