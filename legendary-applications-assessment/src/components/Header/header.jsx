@@ -9,7 +9,7 @@ function Header() {
       </div>
       <div className="header-buttons">
         <div>
-          <button>Get Help</button>
+          <button>Send Alpha Feedback</button>
         </div>
         <div>
           <button>Contact Us</button>
