@@ -64,7 +64,7 @@ function RegisterForm(props) {
         </div>
       </div>
       <div className="input-container">
-        <div className="input-lable">
+        <div className="input-lable-email">
           <label>Email</label>
         </div>
         <div>
@@ -89,39 +89,31 @@ function RegisterForm(props) {
           />
         </div>
       </div>
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className="input-container-small">
-              <div className="input-lable">
-                <label>First Name</label>
-              </div>
-              <div className="form-floating">
-                <input
-                  type="text"
-                  placeholder="Enter Firstname"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                />
-              </div>
-            </div>
+      <div className="small-input-container">
+        <div className="input-container-small">
+          <div className="input-lable-name">
+            <label>First Name</label>
           </div>
-          <div className="col">
-            <div className="input-container-small">
-              <div>
-                <label htmlFor="floatingInputGrid" className="input-lable">
-                  Last Name
-                </label>
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Enter Lastname"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-              </div>
-            </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter Firstname"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="input-container-small">
+          <div className="input-lable-name">
+            <label>Last Name</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter Lastname"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
           </div>
         </div>
       </div>
@@ -140,45 +132,39 @@ function RegisterForm(props) {
           />
         </div>
       </div>
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className="input-container-small">
-              <div>
-                <label className="input-lable">City</label>
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Enter City"
-                  value={city}
-                  onChange={(e) => setCity(e.target.value)}
-                />
-              </div>
-            </div>
+      <div className="small-input-container">
+        <div className="input-container-small">
+          <div>
+            <label className="input-lable-city">City</label>
           </div>
-          <div className="col">
-            <div className="input-container">
-              <div className="input-lable">
-                <label htmlFor="floatingSelectGrid">Select Your Country</label>
-              </div>
-              <div>
-                <select
-                  onChange={(e) => setCountry(e.target.value)}
-                  value={country}
-                >
-                  <option defaultValue={""}></option>
-                  <option value="Unitied States">United States</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Mexico">Mexico</option>
-                </select>
-              </div>
-            </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter City"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="input-container-small">
+          <div className="input-lable-small">
+            <label htmlFor="floatingSelectGrid">Select Country</label>
+          </div>
+          <div>
+            <select
+              onChange={(e) => setCountry(e.target.value)}
+              value={country}
+            >
+              <option defaultValue={""}></option>
+              <option value="Unitied States">United States</option>
+              <option value="Canada">Canada</option>
+              <option value="Mexico">Mexico</option>
+            </select>
           </div>
         </div>
       </div>
       <div className="input-container">
-        <div className="input-lable">
+        <div className="input-lable-phone">
           <label htmlFor="floatingInputGrid">Home Phone</label>
         </div>
         <div>
@@ -191,7 +177,7 @@ function RegisterForm(props) {
         </div>
       </div>
       <div className="input-container">
-        <div className="input-lable">
+        <div className="input-lable-phone">
           <label htmlFor="floatingInputGrid">Mobile Phone</label>
         </div>
         <div>

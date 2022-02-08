@@ -30,6 +30,7 @@
   color: white;
   margin-left: 20%;
   width: 30vw;
+  margin-top: 10px;
 }
 
 .input-container input {
@@ -37,4 +38,55 @@
   height: 40px;
   border-radius: 10px;
   padding: 5px;
+  border-style: none;
+}
+
+.small-input-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30vw;
+  margin-left: 20%;
+}
+
+.input-container-small {
+  color: white;
+  width: 49%;
+  margin-top: 10px;
+}
+
+.input-container-small input {
+  width: 100%;
+  border-radius: 10px;
+  border-style: none;
+  height: 40px;
+}
+
+.input-container-small select {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.input-lable {
+  padding-right: 85%;
+}
+
+.input-lable-small {
+  padding-right: 50%;
+}
+
+.input-lable-city {
+  padding-right: 85%;
+}
+
+.input-lable-phone {
+  padding-right: 80%;
+}
+.input-lable-name {
+  padding-right: 65%;
+}
+
+.input-lable-email {
+  padding-right: 92%;
 }
