@@ -6,6 +6,7 @@
   margin-right: 15%;
   margin-bottom: 50px;
   width: 30vw;
+  color: white;
 }
 
 .form-floating {
@@ -14,10 +15,26 @@
 }
 
 .register-button button {
+  background-color: rgb(48, 47, 47);
+  margin-top: 20px;
   border-radius: 15px;
-  border-color: rgb(98, 98, 255);
-  border-width: 5px;
+  border-width: 1px;
   border-style: solid;
-  color: rgb(98, 98, 255);
+  color: white;
   padding: 2px, 5px;
+  width: 30vw;
+  font-weight: 300;
+}
+
+.input-container {
+  color: white;
+  margin-left: 20%;
+  width: 30vw;
+}
+
+.input-container input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px;
 }
