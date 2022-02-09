@@ -3,11 +3,18 @@
   height: 12vh;
   width: 50vw;
   margin-bottom: 35px;
-  display: block;
+  display: flex;
+}
+
+.company-image img {
+  position: absolute;
+  right: 43.5%;
+  height: 12.5vh;
 }
 
 .company-logo {
   position: absolute;
+  right: 25%;
   padding-left: 0.5rem;
   padding-top: 1rem;
   color: rgb(48, 47, 47);
