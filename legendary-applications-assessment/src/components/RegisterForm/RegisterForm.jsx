@@ -155,7 +155,7 @@ function RegisterForm(props) {
               onChange={(e) => setCountry(e.target.value)}
               value={country}
             >
-              <option defaultValue={""}>select country</option>
+              <option defaultValue={""}></option>
               <option value="Unitied States">United States</option>
               <option value="Canada">Canada</option>
               <option value="Mexico">Mexico</option>

@@ -7,14 +7,14 @@
 }
 
 .company-image img {
-  position: absolute;
+  position: relative;
+  left: 5%;
   right: 43.5%;
   height: 12.5vh;
 }
 
 .company-logo {
-  position: absolute;
-  right: 25%;
+  position: relative;
   padding-left: 0.5rem;
   padding-top: 1rem;
   color: rgb(48, 47, 47);
@@ -22,9 +22,9 @@
 
 .header-buttons {
   width: 10vw;
-  position: absolute;
-  right: 5%;
-  top: 3%;
+  position: relative;
+  left: 14rem;
+  margin-top: 15px;
 }
 
 .header-buttons button {
@@ -36,4 +36,5 @@
   color: rgb(56, 119, 255);
   padding-left: 5px;
   padding-right: 5px;
+  width: 100%;
 }
