@@ -4,7 +4,7 @@ import "./formHeader.css";
 function FormHeader() {
   return (
     <div className="form-header-container">
-      <h3>Please enter information to register</h3>
+      <h3>Enter your information below</h3>
     </div>
   );
 }
