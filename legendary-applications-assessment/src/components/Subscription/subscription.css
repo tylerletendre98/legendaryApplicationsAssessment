@@ -12,7 +12,9 @@
   padding-bottom: 30px;
   padding-left: 25px;
   padding-right: 25px;
-}
+  width: 17.5vw;
+  margin-top: 12.5%;
+  }
 
 .subscription-button button {
   border-radius: 15px;
@@ -88,6 +90,7 @@
   color: white;
   width: 10vw;
   height: 35px;
+  margin-top: 25%;
 }
 
 .next-subscription-button {

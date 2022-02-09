@@ -76,7 +76,7 @@ function App() {
         </div>
         <div className="messageboard-container">
           <Header />
-          <div>
+          <div className="messageboard">
             <div className="messageboard-header">
               <h2>Welcome back!</h2>
             </div>
