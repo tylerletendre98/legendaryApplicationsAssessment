@@ -16,7 +16,7 @@ function Subscription(props) {
   };
 
   const nextSubscription = () => {
-    if (currentSubscription <= props.productList.length) {
+    if (currentSubscription < props.productList.length - 1) {
       setCurrentSubscription(currentSubscription + 1);
       console.log(currentSubscription);
     } else if (currentSubscription === props.productList.length - 1) {
@@ -66,8 +66,8 @@ function Subscription(props) {
           <h2>Please select a Subscription Level</h2>
         </div>
         <div className="map-container">
-          <div>
-            <button onClick={lastSubscription}>last subscription</button>
+          <div className="next-subscription-button">
+            <button onClick={lastSubscription}>Last subscription</button>
           </div>
           <div className="product-container">
             <div>
@@ -97,7 +97,7 @@ function Subscription(props) {
               </button>
             </div>
           </div>
-          <div>
+          <div className="next-subscription-button">
             <button onClick={nextSubscription}>Next subscription</button>
           </div>
         </div>
@@ -106,67 +106,69 @@ function Subscription(props) {
             <h3>Do you have a discount code?</h3>
           </div>
           <div className="discount-input">
-            <div className="form-floating">
-              <input
-                type="text"
-                className="form-control"
-                id="floatingInputGrid"
-                placeholder="Enter Lastname"
-                value={discountCode}
-                onChange={(e) => setDiscountCode(e.target.value)}
-              />
-              <label htmlFor="floatingInputGrid">Enter discount code</label>
-            </div>
-            <div className="discount-button">
-              <button onClick={handleSubmit}>Submit Code</button>
-            </div>
+            <input
+              type="text"
+              placeholder="Enter discount code"
+              value={discountCode}
+              onChange={(e) => setDiscountCode(e.target.value)}
+            />
+          </div>
+          <div className="discount-button">
+            <button onClick={handleSubmit}>Submit Code</button>
           </div>
         </div>
       </div>
     );
   } else {
     return (
-      <div className="map-container">
-        <div>
-          <button onClick={lastSubscription}>last subscription</button>
+      <div className="product-wheel">
+        <div className="product-header">
+          <h2>Please select a Subscription Level</h2>
         </div>
-        <div className="product-container">
-          <div>
-            <div className="product-name">
-              <h3>{props.discountedProductList[currentSubscription].name}</h3>
-            </div>
+        <div className="map-container">
+          <div className="next-subscription-button">
+            <button onClick={lastSubscription}>Last subscription</button>
+          </div>
+          <div className="product-container">
             <div>
-              <p>
-                {props.discountedProductList[currentSubscription].description}
-              </p>
+              <div className="product-name">
+                <h3>{props.discountedProductList[currentSubscription].name}</h3>
+              </div>
+              <div>
+                <p>
+                  {props.discountedProductList[currentSubscription].description}
+                </p>
+              </div>
+              <div>
+                <p>
+                  Duration:{" "}
+                  {
+                    props.discountedProductList[currentSubscription]
+                      .subscriptionLength
+                  }
+                </p>
+              </div>
+              <div className="product-price">
+                <h4>
+                  ${props.discountedProductList[currentSubscription].price}
+                </h4>
+              </div>
             </div>
-            <div>
-              <p>
-                Duration:{" "}
-                {
-                  props.discountedProductList[currentSubscription]
-                    .subscriptionLength
+            <div className="subscription-button">
+              <button
+                onClick={() =>
+                  handleChoice(
+                    props.discountedProductList[currentSubscription].id
+                  )
                 }
-              </p>
-            </div>
-            <div className="product-price">
-              <h4>${props.discountedProductList[currentSubscription].price}</h4>
+              >
+                Subscribe
+              </button>
             </div>
           </div>
-          <div className="subscription-button">
-            <button
-              onClick={() =>
-                handleChoice(
-                  props.discountedProductList[currentSubscription].id
-                )
-              }
-            >
-              Subscribe
-            </button>
+          <div className="next-subscription-button">
+            <button onClick={nextSubscription}>Next subscription</button>
           </div>
-        </div>
-        <div>
-          <button onClick={nextSubscription}>next subscription</button>
         </div>
       </div>
     );

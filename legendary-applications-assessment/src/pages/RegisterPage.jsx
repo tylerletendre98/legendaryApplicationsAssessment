@@ -37,7 +37,7 @@ function RegisterPage(props) {
   } else {
     return (
       <div>
-        <div>
+        <div className="subscriptionpage-container">
           <Subscription
             productList={props.productList}
             createUserObject={createUserObject}

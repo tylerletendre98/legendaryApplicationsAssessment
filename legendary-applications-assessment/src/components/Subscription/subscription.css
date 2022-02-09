@@ -16,13 +16,14 @@
 
 .subscription-button button {
   border-radius: 15px;
-  border-color: rgb(98, 98, 255);
-  border-width: 5px;
+  background-color: rgb(48, 47, 47);
+  border-radius: 15px;
+  border-width: 1px;
   border-style: solid;
-  color: rgb(98, 98, 255);
+  color: white;
   padding: 2px, 5px;
   margin-top: 15px;
-  width: 50%;
+  width: 7.5vw;
 }
 
 .product-name {
@@ -30,8 +31,7 @@
 }
 
 .discount-box {
-  background-color: white;
-  box-shadow: 5px 10px 7px 3px rgba(0, 0, 0, 0.27);
+  background-color: rgb(48, 47, 47);
   border-radius: 15px;
   width: 25vw;
   padding-bottom: 20px;
@@ -40,27 +40,56 @@
   padding-right: 10px;
   margin-top: 5%;
   position: absolute;
-  left: 37.5%;
+  left: 12.5%;
 }
 
 .discount-box-title {
   margin-bottom: 10px;
+  color: white;
 }
 
 .discount-button {
   margin-top: 15px;
-  color: rgb(42, 42, 185);
 }
 
 .discount-button button {
   border-radius: 15px;
-  border-color: rgb(98, 98, 255);
-  border-width: 5px;
+  background-color: rgb(48, 47, 47);
+  border-radius: 15px;
+  border-width: 1px;
   border-style: solid;
-  color: rgb(98, 98, 255);
+  color: white;
   padding: 2px, 5px;
+  width: 15vw;
 }
 
-.product-header{
+.discount-label {
+  padding-right: 45%;
+  color: white;
+}
+
+.discount-input input {
+  width: 20vw;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px;
+  border-style: none;
+}
+.product-header {
+  color: white;
   margin-bottom: 30px;
+}
+
+.next-subscription-button button {
+  background-color: rgb(48, 47, 47);
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  color: white;
+  width: 10vw;
+  height: 35px;
+}
+
+.next-subscription-button {
+  margin-top: 13%;
 }
